@@ -1,0 +1,78 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /*background-color: black;  Red background */
+    background-image:  url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2QBh1DoFAHgDhUuL6pGJy9PFvZVv_6_xV-A&s");
+    background-size: cover;
+}
+
+.auth-container {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 370px;
+    text-align: center;
+    height: 500px;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    font-size: 46px;
+    color: white; /* Black font */
+    font-weight: bold; /* Bold text */
+    padding-bottom: 50px;
+    padding-top:20px;
+    text-decoration: underline;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    text-decoration: underline;
+    size: 20px;
+    padding-bottom: 40px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white; /* Black font */
+    font-weight: bold; /* Bold text */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid white; /* Black border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: bold; /* Bold text */
+    
+}
+
+.input-group input::placeholder {
+    font-weight: bold; /* Bold placeholder text */
+}
+
+button {
+    background-color: white; /* Black background */
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold; /* Bold text */
+}
+
+button:hover {
+    background-color: #333; /* Darker black on hover */
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderluxe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+      <header>
+        <div class="logo">
+            <img src="data:image/png;base64,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"></img>
+                </div>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/hack4B/index.html">Home</a></li>
+                
+                <li><a href="http://127.0.0.1:5500/chatbot/index.html">Travel Guides</a></li>
+
+                <li><a href="http://127.0.0.1:5500/hack4B/index.html">Features</a></li>
+                <li><a href="http://127.0.0.1:5500/hack4B/index.html">Reach Out</a></li>
+
+                <li><a href="http://127.0.0.1:5500/hack4B/index.html">About Us</a></li>
+               
+                
+                <button class="action-buttons" id="signupButton"><a href="http://127.0.0.1:5500/authentication/indexauth.html">Sign in</a></button>
+                
+            </ul>
+            
+       
+    </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Wanderluxe</h1>
+            <h2>Elegant Escapades</h2>
+            <p>Your ultimate travel guide for unforgettable adventures</p>
+            <div class="hero-buttons">
+                <button ><a href="http://127.0.0.1:5500/chatbot/index.html">Detailed Travel Guides</a></button>
+                
+                
+            </div>
+        </section>
+        <section class="features">
+            <h2>Features</h2>
+            <p>EXPLORE . DISCOVER . WANDER .</p>
+            <div class="feature-cards">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/81huKW06hKL.jpg" alt="Feature 1">
+                    <p>Comprehensive Destination Guides</p>
+                    <p>Get detailed information on best routes by train, flights, and bus, as well as recommendations on spots to visit, hotels to stay at, and local food to try.</p>
+                    
+    
+                </div>
+                <div class="card">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/029/495/622/small/silhouette-of-a-man-in-a-wheelchair-on-the-beach-at-sunset-disabled-handicapped-man-has-a-hope-he-is-sitting-on-wheelchair-and-stretching-hands-at-sunset-ai-generated-free-photo.jpg" alt="Feature 2">
+                    <p>Assistance for Disabled Travelers</p>
+                    <p>We provide support and guidance for disabled travelers to ensure a smooth and enjoyable travel experience.</p>
+                </div>
+                <div class="card">
+                    <img src="https://img.freepik.com/premium-photo/elegant-escapes_636537-97191.jpg" alt="Feature 3">
+                    <p>Catchy Slogans and Pictures</p>
+                    <p>Enjoy our smart look with catchy slogans, stunning pictures, and a user-friendly navbar that enhances your overall travel experience.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact-section" id="contact-us">
+            <h2>Contact Us</h2>
+            <p>Our team is here to help you with any inquiries you may have.</p>
+            <p>Have a question or need assistance? Feel free to reach out to us.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSKqkbQf3oauQdMPpf8YtaoiCc9l7_9ldc6Q&s">
+                    <h3>Email</h3>
+                    <p>For partnership opportunities or collaborations, please contact us.</p>
+                    <p>wanderluxe@yahoo.co.in</p>
+                </div>
+                <div class="contact-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAz_OwyArMLZIuH9ginr1vlKAOQLJnWZsIfw&s" alt="Phone Icon">
+                    <h3>Phone</h3>
+                    <p>Follow us on social media for more travel inspiration and updates.</p>
+                    <p>+91 9432211767</p>
+                </div>
+                <div class="contact-item">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAY1BMVEX///8AAADa2tru7u4VFRUzMzPHx8eysrKFhYVLS0vS0tLy8vIkJCSJiYmCgoIwMDDo6OhAQEDg4OCWlpY4ODjBwcGgoKBTU1Oqqqr4+Ph4eHhwcHAqKipiYmJra2sMDAwcHByq1A7/AAAF+klEQVR4nO2ca7uyLBCFFUxLMw+lZqX1/3/lY1tRVA6jAvZe17s+tq3ujTgzLIYsCyiMvOfpbb+j6uqm0DfpFb6e7EGvh7s3kGUFV3uqBO3M5Cczpkbhrkzem8Vk21WwH9OdjdTohPdi8rhMtl2U+zD5Aibbfu4DdRJC2dkeTPNYMNEONzB+yaBy81C5jMlOYuNQHymU+VmF5EzmH0D53WtkGuoCgTL8/JU1BMpwuYALCJThmR6AoO6GoSoIlGcWCjanTFfGDwiU6ZAuTcdfGWaSFFOtCtNQFgDK8MPXKJQync0vTOUZ+WGcCTBU5suppvSUMF12YBKvsJpHb6f1qDCA7mYoCHKNvxeTZT05SM6OTLyqONnZOvPnNcz7vpOPMKjMbmOm8DccRhTWyfnL8yoehus6kcoYua7ro91cqb0UIySbq8jLr51yzzWQ5sKXbdei6YqOH2f0vH2SXPOdaytdfu7CzPrAuepkIsYTbyWJIk4YrzWmYLIk4HheLgfJ1mm+luQr2BEHcZzzNm7qgiID9WHO9FKA1Ex4TavP9CD8ryXLvVrPDezTPnOg0FkMpaeM6m8PeynC3/fopGX92Q8Uu5qV2tQ6PI2Y7JRxliJSJvupflaRgeKUsxBLWPlQBeT21Oy/CwJnr0g1lGRGgaBsxTkwIIUtzwUAQSk2W8hAfXjRBgaldFoFZAOv4l0BhFJpwPaRkVvfQaEUjhWpk7gDBYc6q6IiAyVI9WAo+6UmCfYbG/yBWgBlv5SMVe82Tf9HKm8sgGoCcOYiFLOEwamI7HSeRkBeVRRVSIrvRVBNsnpFCVNFlYO4+oGih703y/NVUEIBSud+V4quHakNdU85FCAdZeRSemFFlXQ3rBxKbqyRMUnoF6mCvI0TSqGkcb//ttGD7E0/QS2UJHGXfYwaPRT0ppAGqO9MifMLR8f6TV03KKVKcvVQ3wYP5ACuGw8gvSerHqoJM+VNftksuVPuvXKopJkpLmCgZgYF5fmohrp9fbZMZEx0mpk/lEsOh3pAugPeeDppOUqmTDQEHCq3PEkPmn0m0Vy+Ez2PsOk6KAsLsW73YbGUi2dVwnDugpVQf+/9ClALlAFf7LcPE3ExlD4Ng7sOKsDq1DuqQ2cwHIpKaTEkOIJFTPHh6V4FhQCNe3CRld+QZ1ZBpTLjbxXUkGfgUJ5uqCHP/BDUEHH/41DZ/1BAKPcXoXzdUGuePu1Qx21QkHXBcqg1wZOCwtXb2SDqQz/O+0Ay8po0o6wdiCoxR0XxmoSsDIra3zjQrw9V7Q9BTbwgENSTsw4P84VNMDyoNeUwX85jUVOFGahmubfENOZAlaqh+DsscCiqa1LVsv3AIYBDUS//QUG6mGWC79twoLLJZ8n6TSGCb31zoCh/sf0HFUDdwIGBAzV1XSzQcQuxHPD+CAdq6k9JOnNhAp9b4UBRx4haKCwzeQxATe1FJUO1EaqkunDJk7x9Vm2Eoo8REahgs2exEQozoADHMvVCxYfhZSoQg87xaINKKSeHzg7uYf5VxqDofptxykKX4pTcBh0ilm5FwcDXBtUIx+kgxFQalP6s/xJevLChZrtYKzSbgOcfgJp1z26Fomu6w2mR+uZ95VDZ9AMXiLTBKYfalOhyTVDSBkqh0l+E8n4RqtYDta14KvRAbVtRaYIqQSegDUNZeEs5oAuqmVbhka2Q8Fa8K3xtUHyRs32SZZxZqMsvQnW+v6wLyixUF1kjicVpFqqLrLIfbzEL1RVbheQMllmo7i2yQym7QMl+UMYsVLdJITssbhYqbleqsh5Sc1Cxn+WP1s6OqvDuCs6KGoJKr3Uy6RA7F88753CfCaj0yt1XfHksi1U/lP8UbnVGjHPRuqEQ89cDx6qnAV4vVDz6cafiknvfF3Lvfn3Q5p5zHUdTrVBZb5840cX/671vEk30NzABdh9DjXoafatGqLLfdn+FLvUm6tcMvWEkaTNEHxQmNvE5p+ZMOvnhR9TbPkcDULi7dc44fMezJJMS+OEwly4o0tc8/b0IzMh8bpt8ov5S1VD/ADxcZpY6ZZxJAAAAAElFTkSuQmCC" alt="Office Icon">
+                    <h3>Office</h3>
+                    <p>We look forward to hearing from you!</p>
+                    <p>Canal S Rd, Beleghata, Kolkata, West Bengal-700015</p>
+                </div>
+            </div>
+        </section>
+        <script>
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href="#contact-us"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+    
+                    document.querySelector(this.getAttribute('#contact-us')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+
+        <footer>
+            <div class="footer-container">
+                <div class="newsletter">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAkFBMVEUHCAr///8AAACKi4v8/PwFBggKCw1zdHb+/f4AAAQEBQf8/v35+fkICQnz8/OioqKAgIAvLy/V1dXBwcHn5+ft7u5AQUAVFxdsbG6Vl5bKysqOjo5GR0nR0dG3t7iusK/d3d1cXFxOT09iZGOoqas7OztvcG8jIySHhoacnp0oKSlTU1XGxsgTFBUqKiwyMzUQfa11AAAH9ElEQVR4nO2cCVPbOhCArUVS4rMhOAQIRwgQXmlD//+/ezqsXTlNSKF0GCv7daYDJmbQem+tnGUMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzBJoLTOlMF+XWu6rs0Vd12bL9UbN/qb6U7zefeDTGXx5SFRQ0S0hPhyvfPGbPedas8vHBAwOkHugS4/LLqLi5MR7NKT+M7FPckNHujyCPQQpQInAmnmuDRY0eXSyOr3pcE9fUJcozRhPqPLJ8OUSQZTIc0/x12kKI+0tCkU23cpZe5z2Jsf+/fJ/fcNA7iXouoUojyn562i5z2B3i3a+FeY4NLFLAPdKRicSxmul/f924ZDAbdoJOVV9MAnJJPZfFso+aYNP5RGZLpwNqIzuBKoJ2dDFYlZ/GmDMhEXYR0qgyUJ5dvW8rQxEVSTZSTIC4Fq0pwOVyYZXOL6ZGu8bBdl4L7qFihl9QRxsqHgqSLlCiaiTGBvx90vGovLgUZiRw6dHVhXcIkPV8NZZwbm8tWWTK5Ih86iOxZi3NnTuK2HLJMM1ugaRIlLUflp1SmQ+f8hWqE2JoJUZCJQVygTsR60SIzK33QrMRpxG9aie0ZlnAamZYVRrHGQiTGRzti09dbjTiRXUO9Mf4eChuuKXKaNx36VaFSWky6fU0ZWC9KfFoogQzinT8vrATtYD9xRvJiaVF77ZAtGtMrGx2NT3OWbhi5T4q/iQPU4eJFk8Dwjf2o9gX/20BmV4zas3ppIEOANqklPgLPn4ctEw39hmVI2YA3EASs0KRmKGri2gusEuIo+2yt0vmghn0luFB/d5vcoCbsTGEqm3m2GQscSF0jf4ixuoIVOH3iglZak+fDSkKzW1s0aEwmxRTQv/oP28gvqmQ3cA+0m9VE2QwtElUpIw6y1zMzjL2AWZDQWC+qs0O3S3K5SEEk/XRcrUhRYBtuR1qjgO4luWdPHfgiMz6YQ0EnoiXMI6DtcWdfFnguBYaaaw1yOg+CsiXiKwrgjGa5vF4zDRcO8Feg7JuQR4KfA5OXMmAgmMj/Rk9ZRY6Fs58nIxHdMgvtsNugqTJKLAUWsUWnKKmo46gYd8XYDatDowmRo6E8fe1EWQ4qMTSQUNMp8AmUyhfxr/v5/g3GUqBFxG9IkuaQpXjgmCHVx2NaKT5TYRu45DagNaQtbzLtMkrstEtdw9D+tC+ym+LI6jUAcgNcoHj9E8Xi6LRTbkw/bhibdk9iQe0kkN0FsowxlssyDY6h7ezne49AuV55jHJa+4ZiWUHLbUA052iLa3DvreRRJRbIR2AKvlm1aDtZj25AhHhsvWruVKw2/mlgmZfWrVxF1IhHiYtgNxz1QPLZVr/cNWtk2ZKwpl/3KOcjkBrJs0B3H3cA5pRplVPZsojakaOscM7pViXWObVsm0STYBp+78M89848eRpTUi3XnTVRGcbjsdVPSAlQjQjK/3HSPXdtkFuO0rfK8iRRWVN6oSlnlqcokozZknKKcC3IopbjuFCWft6EPWabRcNxF4XZv/DKpN+RMhGwHk1z4LnCOYLZ7dCcNQoYmnwD3jqONP6cTfq8dnqJ6+D5lmdiBCSmiYQINWSv6LAs7A2jqIx+43cbfl/7N/xo4teucbXDuwmYnWyzAKxQmM6dJpmtI4Qa3JjTc9hqZiDcr2ZxCYUvDUAg80pBGkmiAxhS+4TtrIljkIbeAfTnjXxqok8zWCDuttupsQdfUapKxUFb1/om3BCk0XHYxR5uvp7RPEYnhinY1ymXSMcdhi74aRygmpB8VRPvHkdIMdsLxXYSJmrqr/mRnIhPa7yDhDHjC8SMUoWtvhdJCDq0cj/sikVUCkxXvAc6rEH6l+AHaONy+TPyWaWL9xjdRdhewk4kxEV3YNmRPJmM7vpW8h41xPXkfW6R4MY5XwbPVExmpyQgyfTRCKaJh6rLbG1faOpgqUpSb9ONwDzihvdCZ68nrDOIhrV6D8ihwo3+hZTQKa4+PZCTccNxDOMRjRTCNZpJwW1AO+6TBe9FuyiLEGDvhiOE2PgS2OCKRuF79FY3P38aelPbalylu/O1Hw7rEVMSYCM3P13Tk5+KI1CSz0wRhlmtsN/6iIwWqDo23n0cVh4ssbjhuDwG73r4pdIZ/0uBdwCueNCjFurd220oYif6A1zGg+jNLv5mI3fBpX45LJibeYqln4vCWTOoaVlXUxT4O3FHsLg4/7tqmgLsoDifen3bYhiMm8LPnHTmIgicqdPKUxoT3gnWelG5v/DdFsbUgfngzzdNP3egwjvyDwzgmaqczY78HBadRK+3h7eXWCn5VyW+NRg1Hcbgnrwo4c617nbSjjcdhq/MDMrFda9t3+5G29fTf3nAgB3E76cbttGmcd9uJ0nQYR8p2c+Dx19h1S3nLOIcGj8oeXqh9V5BvTjZpHBbdgardq028TMQNHCRE7TLdilDDa7R7c7keHWBSYWNfpLpFWsfH8d+Df5fFV//5/4T47PX7ZCIPpncDxTbQ5GEB7BFKm2Qrkg41fUAodmcjuRxFwbz5qJo4qVSH0pnBoZR9N8zHRSLsNtBXL+KT0XDd2cDHSa2Tr2A6/ks9sS/O+eplfCrb54g/RGJlT/wu2Y+yGKUlk+xwdfMHpPLuk0D9d8ux76ZOSyCfQ5olD8MwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMwDMMcF/8DTk1SClA7G0cAAAAASUVORK5CYII=" alt="TeleportHQ Logo" class="logo">
+                    <p>Wanderluxe</p>
+    
+                    
+                    <p>Subscribe to our newsletter for the latest updates on new features and product releases.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="consent-text">By subscribing you agree to with our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.</p>
+                </div>
+                <div class="explore">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Hotels</a></li>
+                        <li><a href="#">Restaurants</a></li>
+                        <li><a href="#">Travel Tips</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="connect">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="follow-us">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        
+                        <li><a href="#">LinkedIn</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 wanderluxe</p>
+                <ul>
+                    <li><a href="#">/privacy</a></li>
+                    <li><a href="#">/terms</a></li>
+                    <li><a href="#">/cookies</a></li>
+                </ul>
+            </div>
+        </footer>
+        </main>
+        <script src="main.js"></script>
+</body>
+</html>

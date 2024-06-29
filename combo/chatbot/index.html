@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Assistant Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  
+</head>
+<body>
+
+  <div class="assis">
+    <p>YOUR</p>
+    <p>TRAVEL</p>
+    <p>PARTNER</p>
+  </div>
+
+<div class="chat-container">
+  
+  <div class="messages" id="messages"></div>
+  <div class="input-container">
+    <input type="text" id="userInput" placeholder="Type your message here...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .chat-container {
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .message {
+    margin: 10px 0;
+  }
+  .message.user {
+    text-align: right;
+  }
+  .message.assistant {
+    text-align: left;
+  }
+  .input-container {
+    display: flex;
+  }
+  .input-container input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  .input-container button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+  }
+  .input-container button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+
+<script>
+  const messagesContainer = document.getElementById('messages');
+
+  function addMessage(role, content) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message', role);
+    messageElement.textContent = content;
+    messagesContainer.appendChild(messageElement);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  async function sendMessage() {
+    const userInput = document.getElementById('userInput').value;
+    if (!userInput) return;
+
+    addMessage('user', userInput);
+    document.getElementById('userInput').value = '';
+
+    const response = await fetch("https://api.fireworks.ai/inference/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 1iVuyy1oCsPx2uTA6SG5RXnWNxnjHAcNPuKoKxEfJXUYQyMR"
+      },
+      body: JSON.stringify({
+        model: "accounts/fireworks/models/llama-v3-70b-instruct",
+        max_tokens: 1024,
+        top_p: 1,
+        top_k: 40,
+        presence_penalty: 0,
+        frequency_penalty: 0,
+        temperature: 0.6,
+        messages: [
+          {
+            role: "user",
+            content: "suppose you are a travel partner . suggest the names of places and travel plans in a place with budget comparisions based on small , medium and luxury"
+          },
+          {
+            role: "assistant",
+            content: "Let's plan a trip to Bali, Indonesia.\n Here are some suggestions for places to visit, travel plans, and budget comparisons for small, medium, and luxury options:\n\n\n *Day 1-2: South Kuta \n\n *Small Budget:* Stay at a hostel like Puri Lumbung Cottages (starts from $10/night) and\n\n explore the nearby beaches like \n Kuta Beach and Seminyak Beach. Eat at local warungs like Warung Cisu for affordable meals (around $3-5 per meal).\n * *Medium Budget:* Stay at a mid-range hotel like The Kuta Beach Heritage Hotel (starts from $50/night) and enjoy the hotel's amenities. Visit the Uluwatu Temple and watch the sunset at Single Fin, a popular cliffside bar. Eat at mid-range restaurants like Naughty Nuri's for around $15-20 per meal.\n* *Luxury Budget:* Stay at a 5-star hotel like The Mulia, Nusa Dua, Bali (starts from $200/night) and enjoy the luxurious amenities. Take a sunset cruise around the coast and enjoy a romantic dinner at a fine dining restaurant like Kayumanis at around $50-100 per meal.\n\n*Day 3-4: Ubud\n\n *Small Budget:* Stay at a homestay like Sri Ratih Cottages (starts from $20/night) and explore the Ubud Monkey Forest and Ubud Art Market. Eat at local cafes like Clear Cafe for around $5-10 per meal.\n* *Medium Budget:* Stay at a mid-range hotel like The Ubud Village Hotel (starts from $80/night) and enjoy the hotel's amenities. Take a yoga class at Yoga House and visit the Tegalalang Rice Terraces. Eat at mid-range restaurants like Naughty Nuri's for around $15-20 per meal.\n* *Luxury Budget:* Stay at a luxury villa like The Oberoi, Bali (starts from $300/night) and enjoy the private pool and butler service. Take a private yoga class and visit the Neka Art Museum. Eat at a fine dining restaurant like Mozaic at around $50-100 per meal.\n\n*Day 5-6: Nusa Dua\n\n *Small Budget:* Stay at a budget-friendly hotel like The Rama Beach Resort (starts from $30/night) and enjoy the hotel's amenities. Visit the Nusa Dua Beach and take a snorkeling trip to the nearby island of Nusa Lembongan. Eat at local warungs like Warung Nikmat for around $5-10 per meal.\n* *Medium Budget:* Stay at a mid-range hotel like The Laguna, a Luxury Collection Resort & Spa (starts from $120/night) and enjoy the hotel's amenities. Take a glass-bottom boat tour to see the marine life and visit the Benoa Harbour. Eat at mid-range restaurants like The Beach House for around $20-30 per meal.\n* *Luxury Budget:* Stay at a luxury resort like The Conrad Bali (starts from $250/night) and enjoy the private pool and butler service. Take a private snorkeling trip to the nearby island of Nusa Lembongan and enjoy a romantic dinner at a fine dining restaurant like Azure at around $50-100 per meal.\n\n*Budget Breakdown:\n\n *Small Budget:* $500-700 per person for 6 days, including accommodation, food, and activities\n* *Medium Budget:* $1,000-1,500 per person for 6 days, including accommodation, food, and activities\n* *Luxury Budget:* $2,500-3,500 per person for 6 days, including accommodation, food, and activities\n\nNote: The budget breakdown is an estimate and can vary depending on individual preferences and exchange rates."
+          },
+          {
+            role: "user",
+            content: userInput
+          }
+        ]
+      })
+    });
+
+    const data = await response.json();
+    const assistantMessage = data.choices[0].message.content;
+    addMessage('assistant', assistantMessage);
+  }
+</script>
+
+</body>
+</html>
